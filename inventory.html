@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المخزون</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-inventory.png" type="image/x-icon"/>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>إدارة المخزون</h1>
+             <nav>
+                <a href="#" id="href-main" onclick="redirect('href-main'); return false;">→ العودة للرئيسية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-content">
+            <h2>نظام إدارة المخزون</h2>
+            <p>هنا ستجد أدوات وواجهات إدارة المخزون الخاص بك.</p><br/>
+            <img src="images/inventory-icon.png" alt="واجهة نظام المخزون (مثال)" class="center" style="max-width: 250px; border-radius: 8px;">
+
+            <div style="margin-top: 30px;">
+                 <a href="#" id="href-inventory" onclick="link('href-inventory', 0, gmail()); return false;" class="btn">الوصول لنظام المخزون الكامل</a>
+            </div>
+
+        </section>
+    </main><br/>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Copyright by © <span id="currentYear"></span> - MOHAMMAD MATAR</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشكاوي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-complaints.png" type="image/x-icon"/>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>الشكاوي</h1>
+            <nav>
+                <a href="#" id="href-main" onclick="redirect('href-main'); return false;">→ العودة للرئيسية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro">
+            <h2>اختر نوع الشكوى</h2>
+            <p>تصفح النماذج المتاحة أدناه للوصول إلى البيانات المطلوبة .</p>
+        </section>
+
+        <section class="report-cards-container">
+            <!-- بطاقة تبديل آراء الزبائن -->
+            <div class="report-card">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGWNSx1pox-0_zlnP_2YzmB6BJGHmS0cnSuOjW5ro8usfwRg/viewform?usp=pp_url" class="card-link"> <!-- استبدل #form-link1 بالرابط الفعلي -->
+                    <img src="images/change-mind-icon.png" alt="صورة تبديل آراء الزبائن" class="report-cards-container" style="max-height: 240px;width: 70%;border-radius: 8px;position: relative;transform: translate(-20%);">
+                    <div class="card-content">
+                        <h3>تبديل آراء الزبائن</h3>
+                        <p>الشرح عن المنتج ومحاولة إقناع الزبون بتبديل رأيه .</p>
+                        <span class="btn-secondary">عرض النموذج</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- بطاقة ملاحظات بن الحموي -->
+            <div class="report-card">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9q7OhRCk61wfEJ6WlIFl_Uo4Y3zoha2KhXW0DpvvAjXWh-Q/viewform?usp=pp_url" class="card-link"> <!-- استبدل #form-link2 بالرابط الفعلي -->
+                    <img src="images/hamwi-note-icon.png" alt="صورة ملاحظات بن الحموي" class="report-cards-container" style="max-height: 240px;width: 70%;border-radius: 8px;position: relative;transform: translate(-20%);">
+                    <div class="card-content">
+                        <h3>ملاحظات بن الحموي</h3>
+                        <p>الملاحظات الإيجابية والسلبية على منتجات بن الحموي .</p>
+                         <span class="btn-secondary">عرض النموذج</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- بطاقة ملاحظات سيتي كافيه -->
+            <div class="report-card">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4_8EJ3hvFl7ugIq3_f-jFgi2BP6h056o3OnmOCHW7sdYsJQ/viewform?usp=pp_url" class="card-link"> <!-- استبدل #form-link3 بالرابط الفعلي -->
+                    <img src="images/city-note-icon.png" alt="صورة ملاحظات سيتي كافيه" class="report-cards-container" style="max-height: 240px;width: 70%;border-radius: 8px;position: relative;transform: translate(-20%);">
+                    <div class="card-content">
+                        <h3>ملاحظات سيتي كافيه</h3>
+                        <p>الملاحظات الإيجابية والسلبية على منتجات سيتي كافيه .</p>
+                         <span class="btn-secondary">عرض النموذج</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Copyright by © <span id="currentYear"></span> - MOHAMMAD MATAR</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

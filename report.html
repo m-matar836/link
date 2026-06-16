@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقارير</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-report.png" type="image/x-icon"/>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>التقارير</h1>
+            <nav>
+                <a href="#" id="href-main" onclick="redirect('href-main'); return false;">→ العودة للرئيسية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro">
+            <h2>اختر نوع التقرير</h2>
+            <p>تصفح التقارير المتاحة أدناه للوصول إلى البيانات المطلوبة .</p>
+        </section>
+
+        <section class="report-cards-container">
+            <!-- بطاقة تقرير الترويج المباشر -->
+            <div class="report-card">
+                <a href="#" id="href-event" onclick="link('href-event', 1, gmail()); return false;" class="card-link"> <!-- استبدل #report-link1 بالرابط الفعلي -->
+                    <img src="images/event-icon.png" alt="صورة تقرير الترويج المباشر" class="report-cards-container" style="max-height: 240px;width: 70%;border-radius: 8px;position: relative;transform: translate(-20%);">
+                    <div class="card-content">
+                        <h2></h2>
+                        <p>الفعاليات والؤتمرات والأنشطة المعنية بالتذوق فقط .</p>
+                        <span class="btn-secondary">ترويج مباشر</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- بطاقة تقرير الترويج والبيع الغير مباشر -->
+            <div class="report-card">
+               <a href="#" id="href-supermarket" onclick="link('href-supermarket', 2, gmail()); return false;" class="card-link"><!-- استبدل #report-link2 بالرابط الفعلي -->
+                    <img src="images/supermarket-icon.png" alt="صورة تقرير الترويج والبيع الغير مباشر" class="report-cards-container" style="max-height: 240px;width: 70%;border-radius: 8px;position: relative;transform: translate(-20%);">
+                    <div class="card-content">
+                        <h2></h2>
+                        <p>حركة تنشيط المبيعات والحملات الطرقية .</p>
+                         <span class="btn-secondary">ترويج وبيع غير مباشر</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- بطاقة تقرير الترويج والبيع المباشر -->
+            <div class="report-card">
+                <a href="#" id="href-festival" onclick="link('href-festival', 3, gmail()); return false;" class="card-link"> <!-- استبدل #report-link3 بالرابط الفعلي -->
+                    <img src="images/festival-icon.png" alt="صورة تقرير الترويج والبيع المباشر" class="report-cards-container" style="max-height: 240px;width: 70%;border-radius: 8px;position: relative;transform: translate(-20%);">
+                    <div class="card-content">
+                        <h2></h2>
+                        <p>المهرجانات والمعارض والبازارات .</p>
+                         <span class="btn-secondary">ترويج وبيع مباشر</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Copyright by © <span id="currentYear"></span> - MOHAMMAD MATAR</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

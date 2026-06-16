@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تعديل مستخدم</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="main-header">
+    <div class="container">
+        <h1>تعديل مستخدم</h1>
+        <nav>
+            <a href="users.html">→ العودة للقائمة</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <div class="login-container" style="max-width:600px;">
+        <h2>تعديل بيانات المستخدم</h2>
+
+        <div class="input-group">
+            <label>الاسم الكامل:</label>
+            <input id="name" type="text">
+        </div>
+
+        <div class="input-group">
+            <label>البريد الإلكتروني:</label>
+            <input id="email" type="email">
+        </div>
+
+        <div class="input-group">
+            <label>كلمة المرور:</label>
+            <input id="password" type="text">
+        </div>
+
+        <div class="input-group">
+            <label>روابط المستخدم:</label>
+            <div id="links-container"></div>
+            <button type="button" class="btn" onclick="addLinkField()">+ إضافة رابط</button>
+        </div>
+
+        <div class="input-group">
+            <label>المدير المباشر:</label>
+            <select id="manager"></select>
+        </div>
+
+        <div class="input-group">
+            <label>الصلاحية:</label>
+            <select id="role">
+                <option value="no">User</option>
+                <option value="yes">Admin</option>
+            </select>
+        </div>
+
+        <button class="btn-secondary" onclick="updateUser()">حفظ التعديلات</button>
+
+        <p id="msg" class="form-message"></p>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

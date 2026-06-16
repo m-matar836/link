@@ -1,0 +1,635 @@
+/* --- Global Styles & Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #3498db; /* أزرق عصري */
+    --secondary-color: #2ecc71; /* أخضر */
+    --light-gray: #f4f6f9;
+    --medium-gray: #bdc3c7;
+    --dark-gray: #7f8c8d;
+    --dark-color: #2c3e50; /* كحلي غامق */
+    --white-color: #ffffff;
+    --font-family: 'Cairo', sans-serif;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    line-height: 1.7;
+    color: var(--dark-color);
+    background-color: var(--light-gray);
+    direction: rtl;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition-speed) ease;
+}
+a:hover {
+    color: var(--secondary-color);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* --- Header --- */
+.main-header {
+    background-color: var(--white-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+.main-header nav a {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+}
+.main-header nav a:hover {
+    background-color: var(--light-gray);
+}
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--dark-color);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 15px;
+    margin-top: 75px;
+}
+/* --- Buttons --- */
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    cursor: pointer;
+    text-align: center;
+}
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+}
+.btn:hover {
+    background-color: #2980b9; /* درجة أغمق من الأزرق */
+    color: var(--white-color);
+    transform: translateY(-2px);
+}
+.card {
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+}
+.btn-secondary {
+     background-color: var(--secondary-color);
+     color: var(--white-color);
+     border: none;
+}
+.btn-secondary:hover {
+     background-color: #27ae60; /* درجة أغمق من الأخضر */
+     color: var(--white-color);
+     transform: translateY(-2px);
+}
+/* --- Index Page: Welcome & Main Sections --- */
+.welcome-section, .page-intro, .page-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.welcome-section h2, .page-intro h2, .page-content h2 {
+     margin-bottom: 15px;
+     color: var(--dark-color);
+     font-size: 2rem;
+}
+.welcome-section p, .page-intro p, .page-content p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.main-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.section-card:hover, .report-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.section-card .card-link {
+    display: flex; /* لتنسيق الأيقونة والمحتوى جنباً إلى جنب */
+    align-items: center;
+    padding: 25px;
+    color: inherit; /* يرث لون النص الافتراضي */
+    text-decoration: none;
+}
+.section-card .section-icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px; /* مسافة بين الأيقونة والنص بسبب rtl */
+    flex-shrink: 0; /* منع الأيقونة من التقلص */
+}
+.section-card .card-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.section-card .card-content p {
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+.section-card .card-content .btn {
+    margin-top: auto; /* لدفع الزر لأسفل إذا كان هناك مساحة */
+}
+/* --- Report Page: Report Cards --- */
+.report-cards-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+.section-card, .report-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: .25s ease;
+}
+
+.report-card .card-link {
+    display: block; /* لجعل الرابط يغطي البطاقة */
+    color: inherit;
+}
+.section-card img,
+.report-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: none;
+}
+.section-card .card-content,
+.report-card .card-content {
+    padding: 20px;
+    text-align: center;
+}
+.report-card .card-content h3 {
+    color: var(--secondary-color); /* لون مختلف لتمييز عناوين التقارير */
+    margin-bottom: 8px;
+}
+.report-card .card-content p {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.report-card .btn-secondary {
+     width: 100%; /* جعل الزر يملأ عرض البطاقة */
+}
+/* --- Inventory Page --- */
+.page-content img {
+     border: 1px solid var(--medium-gray);
+     padding: 5px;
+     background-color: var(--white-color);
+}
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+    .main-sections, .report-cards-container {
+        grid-template-columns: 1fr; /* عمود واحد في الشاشات الأصغر */
+    }
+    .section-card .card-link {
+        flex-direction: column; /* الأيقونة فوق النص */
+        text-align: center;
+    }
+     .section-card .section-icon {
+        margin-left: 0;
+        margin-bottom: 15px; /* مسافة أسفل الأيقونة */
+    }
+     .welcome-section h2, .page-intro h2, .page-content h2 {
+         font-size: 1.8rem;
+     }
+}
+@media (max-width: 480px) {
+     body {
+         font-size: 15px; /* تصغير حجم الخط قليلاً */
+     }
+     .container {
+         padding: 0 15px;
+     }
+     .btn, .btn-secondary {
+         padding: 8px 20px;
+         font-size: 0.9rem;
+     }
+      .report-card-img {
+        height: 150px;
+     }
+}
+/* --- مجموعات الإدخال --- */
+.input-group {
+    margin-bottom: 20px;
+    text-align: right; /* محاذاة النص لليمين */
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: right;
+}
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* --- رسائل الخطأ --- */
+.error-message {
+    color: #dc3545; /* أحمر */
+    font-size: 0.85em;
+    min-height: 1.2em; /* حجز مساحة لمنع القفز */
+    margin-top: 5px;
+}
+.input-group input.invalid {
+    border-color: #dc3545;
+}
+/* --- خيارات إضافية (تذكرني) --- */
+.options {
+    display: flex;
+    justify-content: space-between; /* يمكنك تغييرها إلى flex-end إذا أردت "تذكرني" فقط */
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #555;
+}
+.remember-me input[type="checkbox"] {
+    margin-left: 8px; /* مسافة بين الصندوق والنص */
+    cursor: pointer;
+}
+/* --- زر تسجيل الدخول --- */
+button[type="submit"], #logout-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px; /* مسافة إضافية فوق الزر */
+}
+button[type="submit"]:hover, #logout-button:hover {
+    background: linear-gradient(to right, #0056b3, #003d80);
+    transform: translateY(-2px); /* تأثير رفع بسيط عند المرور */
+}
+button[type="submit"]:active, #logout-button:active {
+    transform: translateY(0); /* إعادة للوضع الأصلي عند النقر */
+}
+/* --- رسائل النموذج (عامة) --- */
+.form-message {
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 1.5em; /* حجز مساحة */
+}
+.form-message.success {
+    color: #28a745; /* أخضر */
+}
+.form-message.error {
+    color: #dc3545; /* أحمر */
+}
+/* --- رسالة الترحيب --- */
+.welcome-message {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+}
+.welcome-message h2 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+.welcome-message p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 700;
+}
+/* --- حاوية تسجيل الدخول --- */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.login-container:hover {
+    transform: translateY(-5px); /* تأثير رفع بسيط عند المرور */
+}
+#body-login {
+    font-family: 'Cairo', sans-serif; /* استخدام خط Cairo */
+    background: linear-gradient(1.1em, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl; /* الاتجاه من اليمين لليسار */
+    color: #333;
+    overflow-x: hidden;
+}
+/* --- إعدادات أساسية --- */
+#body-error {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif; /* اختر الخط المناسب */
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* لجعل الحاوية تتوسط الصفحة عموديًا */
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+    text-align: center; /* توسيط النص داخل الحاوية */
+}
+/* --- حاوية الخطأ --- */
+.error-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+/* --- أيقونة الخطأ --- */
+.error-icon {
+    font-size: 4rem; /* حجم كبير للأيقونة */
+    color: #dc3545; /* لون أحمر للخطأ */
+    margin-bottom: 20px;
+    line-height: 1;
+    font-weight: bold;
+    display: inline-block;
+    border: 3px solid #dc3545;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* لتوسيط علامة التعجب عموديًا */
+}
+/* --- كود الخطأ --- */
+#error-code {
+    font-size: 3rem;
+    color: #dc3545; /* لون أحمر */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+/* --- عنوان الخطأ --- */
+#error-title {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+/* --- وصف الخطأ --- */
+#error-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+/* --- زر العودة --- */
+.home-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff; /* لون أزرق */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.home-button:hover {
+    background-color: #0056b3; /* لون أغمق عند المرور */
+}
+.pg-ad{
+    width:100%;
+    position: relative;
+    background-color:var(--white-color); 
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+    .section-card img,
+    .report-card img {
+        height: 140px;
+    }
+
+    .main-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .btn, .btn-secondary {
+        padding: 10px 18px;
+        font-size: .9rem;
+    }
+}
+
+.main-header nav a {
+    background: #3498db;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: .25s;
+}
+
+.main-header nav a:hover {
+    background: #217dbb;
+}
+
+h1, h2 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: right;
+}
+
+.input-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+/* NAVBAR الأساسي */
+.navbar {
+    background: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* الشعار */
+.nav-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+/* الروابط */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #d32f2f;
+}
+
+/* زر المنيو للجوال */
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        right: -100%;
+        background: #fff;
+        width: 220px;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-left: 2px solid #eee;
+        border-bottom: 2px solid #eee;
+        transition: 0.4s;
+    }
+
+    .nav-links.show {
+        right: 0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+}
+li{
+margin-top: 5px;
+}
+
+@media (max-width:768px){
+
+    .main-header .container{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .main-header nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;
+    }
+}

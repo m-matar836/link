@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-login.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="body-login">
+    <div class="login-container">
+        <form id="login-form">
+            <img src="images/login-icon.png" alt="صورة المستخدم" class="report-cards" style="max-height: 175px;width: 50%;border-radius: 8px;position: relative;transform: translate(-47%);">
+
+            <h2>تسجيل الدخول</h2>
+
+            <div class="input-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" required>
+                <div class="error-message" id="password-error"></div>
+            </div>
+
+            <button type="submit">تسجيل الدخول</button>
+
+            <div id="form-message" class="form-message"></div>
+        </form>
+    </div>
+
+    <!-- رسالة ترحيب إذا كان المستخدم مسجل الدخول -->
+    <div id="welcome-message" class="welcome-message" style="display: none;">
+        <h2>مرحباً بعودتك!</h2>
+        <p>أنت مسجل الدخول بالفعل.</p>
+        <button id="logout-button">تسجيل الخروج</button>
+        <a href="" id="back" onclick="redirect('back')"><button type="submit">العودة للصفحة الرئيسية</button></a>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
