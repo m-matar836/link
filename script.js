@@ -1,6 +1,6 @@
 // ================== إعداد رابط Google Apps Script ==================
 const SHEET_API =
-    "https://script.google.com/macros/s/AKfycbztYgHeE2Ncvdyq70I7cIVfMGmw8aMKlk-r6RtfIqgg74JGNGrGwElzngkES10MQOO8Zw/exec"; // ← استبدلها برابط الـ exec
+    "https://script.google.com/macros/s/AKfycbztFfP24ypqzFl3IGj4NxPvLMtwDMZw6akxX9uo8Z81zoCQxCtl4IfFaW5X-X51_U24Zg/exec"; // ← استبدلها برابط الـ exec
 
 // ================== قاعدة البيانات في الواجهة (ذاكرة فقط) ==================
 let emp = [];
